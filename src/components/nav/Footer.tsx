@@ -1,12 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { links } from '../../consts/links';
 import Logo from '../../images/logos/app-logo.svg';
-import Discord from '../../images/logos/discord.svg';
-import Github from '../../images/logos/github.svg';
-import Medium from '../../images/logos/medium.svg';
-import Twitter from '../../images/logos/twitter.svg';
 
 export function Footer() {
   return (
@@ -18,26 +13,11 @@ export function Footer() {
           </div>
           <div className="hidden sm:flex flex-col ml-3">
             <p className="leading-6">
-              Go interchain
-              <br />
-              with Hyperlane
+              Built with Hyperlane
             </p>
           </div>
         </div>
-        <div className="flex">
-          <div className="flex flex-col">
-            <FooterLink href={links.home} text="About" />
-            <FooterLink href={links.explorer} text="Explorer" />
-            <FooterLink href={links.docs} text="Docs" />
-            <FooterLink href={links.chains} text="Chains" />
-          </div>
-          <div className="flex flex-col ml-16">
-            <FooterIconLink href={links.twitter} imgSrc={Twitter} text="Twitter" />
-            <FooterIconLink href={links.discord} imgSrc={Discord} text="Discord" />
-            <FooterIconLink href={links.github} imgSrc={Github} text="Github" />
-            <FooterIconLink href={links.blog} imgSrc={Medium} text="Blog" />
-          </div>
-        </div>
+       
       </div>
     </footer>
   );

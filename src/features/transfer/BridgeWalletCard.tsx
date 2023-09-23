@@ -1,11 +1,15 @@
- import { WideChevron } from '@hyperlane-xyz/widgets';
-import { Spinner } from '../../components/animation/Spinner';
+// Import any other necessary dependencies
+import { WideChevron } from '@hyperlane-xyz/widgets';
+import { Spinner } from '../../components/animation/Spinner'; // You can import this if needed
 import { Card } from '../../components/layout/Card';
 import { useTokenRoutes } from '../tokens/routes/hooks';
+import { BridgeTokenForm } from './BridgeTokenForm';
 
-import { TransferTokenForm } from './TransferTokenForm';
+// Import any other necessary dependencies
 
-export function TransferTokenCard() {
+
+
+function BridgeTokenCard() {
   const { tokenRoutes, isLoading, error: routesError } = useTokenRoutes();
 
   return (
@@ -15,16 +19,18 @@ export function TransferTokenCard() {
           <WideChevron direction="s" height="100%" width="100" rounded={true} />
         </div>
         <div className="relative flex items-start justify-between z-20">
-          <h2 className="pl-0.5 text-lg"></h2>
-          {/* <IconButton
-          imgSrc={GearIcon}
-          width={20}
-          height={20}
-          title="Settings"
-          classes="hover:rotate-90"
-        /> */}
+          <h2 className="pl-0.5 text-lg">Bridge from Polygon to Arbitrum</h2>
+          {/* Render a button with your desired text and style */}
+          {/* { <IconButton
+            imgSrc={GearIcon} // If you have a gear icon, provide its source here
+            width={20}
+            height={20}
+            title="Settings"
+            classes="hover:rotate-90"
+          /> } */}
         </div>
-        {tokenRoutes && <TransferTokenForm tokenRoutes={tokenRoutes} />}
+        {<BridgeTokenForm />}
+
         {isLoading && (
           <div className="my-24 flex flex-col items-center">
             <Spinner />
@@ -44,3 +50,5 @@ export function TransferTokenCard() {
     </Card>
   );
 }
+
+export default BridgeTokenCard;

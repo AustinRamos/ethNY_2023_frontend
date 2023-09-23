@@ -12,11 +12,10 @@ export function TipCard() {
   if (!show) return null;
   return (
     <div className="relative px-3 py-3 w-100 sm:w-[31rem] bg-blue-500 shadow-lg rounded opacity-95">
-      <h2 className="text-white sm:text-lg">Bridge Tokens with Hyperlane Warp Routes!</h2>
+      <h2 className="text-white sm:text-lg">Bridge your Smart Wallet , with it's assets, to another evm chain</h2>
       <div className="flex items-end justify-between">
         <p className="text-white mt-1.5 text-xs sm:text-sm max-w-[70%]">
-          Warp Routes make it easy to permissionlessly take your tokens interchain. Fork this
-          template to get started!
+            this allows a user to bridge their entire smart wallet to another evm wallet, at the same address, and owned either by the origin EOA(cross chain ownership with HyperLane), or owned by the same external account on the destination chain 
         </p>
         <a
           href={links.github}
